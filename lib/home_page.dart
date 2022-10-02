@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'hobby.dart';
 import 'stopwatch.dart';
+import 'login_page.dart';
 
 class HomePage extends StatefulWidget {
   final String username;
@@ -94,6 +96,22 @@ class Page1 extends StatelessWidget {
                 onPressed: () {},
                 child: Text('Dimas Wicaksono'),
             ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context){
+                  return Hobby();
+                }));
+              },
+              child: Text('Hobby'),
+            ),
+            SizedBox(height: 20),
+            IconButton(onPressed: (){
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context){
+                return LoginPage();
+              }));
+            },
+                icon: Icon(Icons.logout, color: Colors.blue)),
           ],
         ),
       ),
@@ -113,7 +131,12 @@ class Page2 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
-              child: Text('Cara Menggunakan Aplikasi\n1. Login menggunakan username dan password\n2. Ngga tau'),
+              child: Text('Cara Menggunakan Aplikasi\n'
+                  '1. Login menggunakan username dan password\n'
+                  '2. Klik floating button untuk menggunakan fitur stopwatch\n'
+                  '3. Klik icon home pada bottom navigation bar untuk ke halaman utama\n'
+                  '4. Klik icon list untuk melihat cara penggunaan aplikasi\n'
+                  '5. Klik button hobby untuk menuju halaman hobby'),
             ),
           ],
         ),
