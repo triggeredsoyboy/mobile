@@ -17,12 +17,9 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          title: Text("Login Page"),
-        ),
         body: Column(
           children: [
-            _flutterLogo(),
+            _upnLogo(),
             _usernameField(),
             _passwordField(),
             _loginButton(context),
@@ -32,10 +29,15 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
-  Widget _flutterLogo() {
+  Widget _upnLogo() {
     return Container(
-      child: FlutterLogo(),
       padding: EdgeInsets.fromLTRB(0, 200.0, 0, 50.0),
+      child: Image.asset(
+        'assets/images/Picture1.png',
+      //   width: 200,
+      //   height: 200,
+      //   fit: BoxFit.contain,
+      ),
     );
   }
 
@@ -105,8 +107,11 @@ class _LoginPageState extends State<LoginPage> {
       width: MediaQuery.of(context).size.width,
       child: ElevatedButton(
         onPressed: () {
+          // Navigator.push(context, MaterialPageRoute(builder: (context) {
+          //   return SecondScreen(username: username, password: password);
+          // }));
           String text = "";
-          if (password == "flutter123") {
+          if (password == "") {
             setState(() {
               text = "Login Success";
               isLoginSuccess = true;

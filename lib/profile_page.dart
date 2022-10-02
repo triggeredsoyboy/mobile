@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:firstflutterapp/login_page.dart';
+import 'package:firstflutterapp/landing_page.dart';
 
 class ProfilePage extends StatelessWidget {
   final String nama;
@@ -94,7 +94,7 @@ class ProfilePage extends StatelessWidget {
                         Navigator.pushAndRemoveUntil(
                             context,
                             MaterialPageRoute(builder: (context) {
-                              return LoginPage();
+                              return LandingPage();
                             }),
                                 (route) => false,
                         );

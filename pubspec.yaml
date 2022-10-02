@@ -35,6 +35,10 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   math_expressions: ^2.0.0
+  url_launcher: ^6.0.20
+
+dependency_overrides:
+  url_launcher_web: ^2.0.6
 
 dev_dependencies:
   flutter_test:
@@ -58,8 +62,7 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
-    - assets/logo.png
-    - assets/camping.png
+    - assets/images/Picture1.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:

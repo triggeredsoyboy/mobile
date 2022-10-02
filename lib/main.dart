@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:firstflutterapp/login_page.dart';
+import 'package:firstflutterapp/landing_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,9 +14,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Kelompok 3',
       theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
+        primarySwatch: Colors.blue,
       ),
-      home: LoginPage(),
+      home: LandingPage(),
     );
   }
 }
