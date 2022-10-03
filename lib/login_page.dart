@@ -17,13 +17,15 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Column(
-          children: [
-            _upnLogo(),
-            _usernameField(),
-            _passwordField(),
-            _loginButton(context),
-          ],
+        body: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              _upnLogo(),
+              _usernameField(),
+              _passwordField(),
+              _loginButton(context),
+            ],
+          ),
         ),
       ),
     );
@@ -31,7 +33,7 @@ class _LoginPageState extends State<LoginPage> {
 
   Widget _upnLogo() {
     return Container(
-      padding: EdgeInsets.fromLTRB(0, 200.0, 0, 50.0),
+      padding: EdgeInsets.fromLTRB(0, 150.0, 0, 25.0),
       child: Image.asset(
         'assets/images/Picture1.png',
       //   width: 200,
@@ -111,7 +113,7 @@ class _LoginPageState extends State<LoginPage> {
           //   return SecondScreen(username: username, password: password);
           // }));
           String text = "";
-          if (password == "") {
+          if (password == "flutter123") {
             setState(() {
               text = "Login Success";
               isLoginSuccess = true;

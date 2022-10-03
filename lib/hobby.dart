@@ -11,54 +11,91 @@ class Hobby extends StatelessWidget {
         title: Text('Hobby'),
         centerTitle: true,
       ),
-      body: Column(
-        children: <Widget>[
-          _hobbyAhmad(),
-          _hobbyRehan(),
-          _hobbyDimas(),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            _hobbyAhmad(),
+            SizedBox(height: 15),
+            _hobbyRehan(),
+            SizedBox(height: 15),
+            _hobbyDimas(),
+          ],
+        ),
       ),
     );
   }
 
   Widget _hobbyAhmad() {
-    return const Center(
-      child: Card(
-        child: SizedBox(
-          width: 300,
-          height: 100,
-          child: Center(
-              child: Text('Hobby Ahmad: Bermain Game'),
+    return Card(
+      clipBehavior: Clip.antiAlias,
+      child: Column(
+        children: [
+          ListTile(
+            title: const Text('Hobby Ahmad'),
+            subtitle: Text(
+              'Mendengarkan Music',
+              style: TextStyle(color: Colors.black.withOpacity(0.6)),
+            ),
           ),
-        ),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Text(
+              'Biasanya mendengarkan musik jepang',
+              style: TextStyle(color: Colors.black.withOpacity(0.6)),
+            ),
+          ),
+          Image.asset('assets/images/music.jpg'),
+        ],
       ),
     );
   }
 
   Widget _hobbyRehan() {
-    return const Center(
-      child: Card(
-        child: SizedBox(
-          width: 300,
-          height: 100,
-          child: Center(
-              child: Text('Hobby Rehan: Bermain Bola Basket'),
+    return Card(
+      clipBehavior: Clip.antiAlias,
+      child: Column(
+        children: [
+          ListTile(
+            title: const Text('Hobby Rehan'),
+            subtitle: Text(
+              'Bermain Basket',
+              style: TextStyle(color: Colors.black.withOpacity(0.6)),
+            ),
           ),
-        ),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Text(
+              'Dipegang bolanya',
+              style: TextStyle(color: Colors.black.withOpacity(0.6)),
+            ),
+          ),
+          Image.asset('assets/images/basket.jpg'),
+        ],
       ),
     );
   }
 
   Widget _hobbyDimas() {
-    return const Center(
-      child: Card(
-        child: SizedBox(
-          width: 300,
-          height: 100,
-          child: Center(
-              child: Text('Hobby Dimas: Berkemah'),
+    return Card(
+      clipBehavior: Clip.antiAlias,
+      child: Column(
+        children: [
+          ListTile(
+            title: const Text('Hobby Dimas'),
+            subtitle: Text(
+              'Berkemah',
+              style: TextStyle(color: Colors.black.withOpacity(0.6)),
+            ),
           ),
-        ),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Text(
+              'Implementasi dari Dasa Dharma Pramuka ke-2',
+              style: TextStyle(color: Colors.black.withOpacity(0.6)),
+            ),
+          ),
+          Image.asset('assets/images/camping.jpg'),
+        ],
       ),
     );
   }

@@ -20,7 +20,7 @@ class LandingPage extends StatelessWidget {
 
   Widget _image() {
     return Container(
-      padding: EdgeInsets.fromLTRB(0, 300, 0, 20),
+      padding: EdgeInsets.fromLTRB(0, 200, 0, 20),
       child: Image.asset('assets/images/Picture1.png'),
     );
   }

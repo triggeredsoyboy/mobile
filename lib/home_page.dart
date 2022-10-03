@@ -82,30 +82,58 @@ class Page1 extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ElevatedButton(
+            SizedBox(
+              width: 250.0,
+              height: 45.0,
+              child: ElevatedButton(
                 onPressed: () {},
-                child: Text('Al Ahmad Syah Huud S.'),
+                child: Text(
+                    'Al Ahmad Syah Huud.\n'
+                    '124200035',
+                  textAlign: TextAlign.center,
+                ),
+              ),
             ),
-            SizedBox(height: 20),
-            ElevatedButton(
+            SizedBox(height: 10),
+            SizedBox(
+              width: 250.0,
+              height: 45.0,
+              child: ElevatedButton(
                 onPressed: () {},
-                child: Text('Ihsan Reihansyah'),
+                child: Text(
+                  'Dimas Wicaksono.\n'
+                      '124200053',
+                  textAlign: TextAlign.center,
+                ),
+              ),
             ),
-            SizedBox(height: 20),
-            ElevatedButton(
+            SizedBox(height: 10),
+            SizedBox(
+              width: 250.0,
+              height: 45.0,
+              child: ElevatedButton(
                 onPressed: () {},
-                child: Text('Dimas Wicaksono'),
+                child: Text(
+                  'Ihsan Reihansyah\n'
+                      '124200075',
+                  textAlign: TextAlign.center,
+                ),
+              ),
             ),
-            SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context){
-                  return Hobby();
-                }));
-              },
-              child: Text('Hobby'),
+            SizedBox(height: 10),
+            SizedBox(
+              width: 250.0,
+              height: 30.0,
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context){
+                    return Hobby();
+                  }));
+                },
+                child: Text('Hobby'),
+              ),
             ),
-            SizedBox(height: 20),
+            // SizedBox(height: 10),
             IconButton(onPressed: (){
               Navigator.pushReplacement(context, MaterialPageRoute(builder: (context){
                 return LoginPage();
@@ -124,23 +152,21 @@ class Page2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Container(
-              child: Text('Cara Menggunakan Aplikasi\n'
-                  '1. Login menggunakan username dan password\n'
-                  '2. Klik floating button untuk menggunakan fitur stopwatch\n'
-                  '3. Klik icon home pada bottom navigation bar untuk ke halaman utama\n'
-                  '4. Klik icon list untuk melihat cara penggunaan aplikasi\n'
-                  '5. Klik button hobby untuk menuju halaman hobby'),
-            ),
-          ],
-        ),
-      ],
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Container(
+            child: Text('Cara Menggunakan Aplikasi\n'
+                '1. Login menggunakan username dan password\n'
+                '2. Klik floating button untuk menggunakan fitur stopwatch\n'
+                '3. Klik icon home pada bottom navigation bar untuk ke halaman utama\n'
+                '4. Klik icon list untuk melihat cara penggunaan aplikasi\n'
+                '5. Klik button hobby untuk menuju halaman hobby\n'
+                '6. Klik icon logout untuk keluar dari aplikasi'),
+          ),
+        ],
+      ),
     );
   }
 }
